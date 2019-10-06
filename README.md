@@ -39,6 +39,9 @@ client.put('https://www.local.com/api/v1/fruits')
 .bodyToJson(user).getResponse();
 ```
 
+## Contributing
+Please contact author.
+
 ## Sponsor
 [IPfolio](https://www.ipfolio.com)
 
