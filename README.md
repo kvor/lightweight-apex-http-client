@@ -1,5 +1,5 @@
-# light-apex-http-client
-Lightweight http client for Apex
+# laHttp
+A lightweight http client for Apex
 
 
 ## Usage
