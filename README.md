@@ -4,7 +4,7 @@ A lightweight Apex http client
 
 ## Usage
 
-### http get
+### get
 
 ```apex
 LaHttp client = new LaHttp();
@@ -12,7 +12,7 @@ HttpRespons response = client.get('https://mydomaim.com/api/v1/users').timeout(6
 ```
 
 
-### http post
+### post
 
 ```apex
 Map<String, String> headers = new Map<String, String> ();
@@ -26,7 +26,7 @@ HttpRespons = client.post('https://mydomaim.com/api/v1/users')
 .bodyToJson(objList).getResponse();
 ```
 
-### http put
+### put
 
 ```apex
 NamedCredentials namedCredential = new NamedCredentials('MyNamedCredential'); 
@@ -34,7 +34,7 @@ NamedCredentials namedCredential = new NamedCredentials('MyNamedCredential');
 SampleUser__c user = new SampleUser__c(Name='John Doe', PlaceOfBirth__c='New York');
 
 LaHttp client = new LaHttp(namedCredential);
-client.put('https://www.local.com/api/v1/fruits')
+client.put('https://mydomaim.com/api/v1/users')
 .header('Content-Type','application/json')
 .bodyToJson(user).getResponse();
 ```
