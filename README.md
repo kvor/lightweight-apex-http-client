@@ -51,6 +51,17 @@ patch | patch(String url) | `client.patch('https://mydomaim.com/api/v1/users')`
 del | del(String url) | `client.del('https://mydomaim.com/api/v1/users')` 
 options | options(String url) | `client.options('https://mydomaim.com/api/v1/users')` 
 
+## methods
+signature| description | example 
+--- | --- | --- 
+timeout(Integer timeout) | Sets the timeout in milliseconds for the request. | `client.get('url').timeout(10);`
+header(String key, String value) | Adds the contents of the request header. | `client.get('url').header('Content-Type', 'application/json');`
+header(Map<String, String> headers) | Adds multiples headers to the request. | `client.get('url').header(new Map<String, String> {'Content-Type' => 'application/json')});`
+body(String body) | Sets the contents of the body for this request | `client.get('url').body('{"userId":"1"}');`
+bodyToJson(Object body, Boolean suppressNulls) | Serializes an object and sets it to the contents of the body for this request. | `client.get('url').bodyToJson(new Person__c(Name='John'), false);`
+body(Object body) | Same as bodyToJson(Object body, Boolean suppressNulls) and suppresses null attributes | `client.get('url').body(new Person__c(Name='John'))`
+body(Blob body) | Sets a Blob as the contents of the body for this request. | `client.get('url').body(Blob.valueOf('{"userId":"1"}'))`
+
 ## Contributing
 Please contact author.
 
