@@ -39,6 +39,18 @@ client.put('https://mydomaim.com/api/v1/users')
 .bodyToJson(user).getResponse();
 ```
 
+
+## http methods
+
+method | signature | example 
+--- | --- | --- 
+get | get(String url) | `client.get('https://mydomaim.com/api/v1/users')`
+post | post(String url) | `client.post('https://mydomaim.com/api/v1/users')` 
+put | put(String url) | `client.put('https://mydomaim.com/api/v1/users')` 
+patch | patch(String url) | `client.patch('https://mydomaim.com/api/v1/users')` 
+del | del(String url) | `client.del('https://mydomaim.com/api/v1/users')` 
+options | options(String url) | `client.options('https://mydomaim.com/api/v1/users')` 
+
 ## Contributing
 Please contact author.
 
