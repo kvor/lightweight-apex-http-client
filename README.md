@@ -62,8 +62,6 @@ bodyToJson(Object body, Boolean suppressNulls) | Serializes an object and sets i
 body(Object body) | Same as bodyToJson(Object body, Boolean suppressNulls) and suppresses null attributes | `client.get('url').body(new Person__c(Name='John'))`
 body(Blob body) | Sets a Blob as the contents of the body for this request. | `client.get('url').body(Blob.valueOf('{"userId":"1"}'))`
 
-## Contributing
-Please contact author.
 
 ## Sponsor
 [IPfolio](https://www.ipfolio.com)
