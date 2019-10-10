@@ -21,7 +21,7 @@ headers.put('Content-Type','application/json');
 List<SampleUser__c> objList = getUsers();
 
 LaHttp client = new LaHttp();
-HttpResponse = client.post('https://mydomaim.com/api/v1/users').headers(headers).bodyToJson(objList).getResponse();
+HttpResponse response = client.post('https://mydomaim.com/api/v1/users').headers(headers).bodyToJson(objList).getResponse();
 ```
 
 ### put
@@ -32,7 +32,7 @@ NamedCredentials namedCredential = new NamedCredentials('MyNamedCredential');
 SampleUser__c user = new SampleUser__c(Name='John Doe', PlaceOfBirth__c='New York');
 
 LaHttp client = new LaHttp(namedCredential);
-client.put('https://mydomaim.com/api/v1/users').header('Content-Type','application/json').bodyToJson(user).getResponse();
+HttpResponse response = client.put('https://mydomaim.com/api/v1/users').header('Content-Type','application/json').bodyToJson(user).getResponse();
 ```
 
 
